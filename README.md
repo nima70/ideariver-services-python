@@ -1,6 +1,8 @@
 # Ideariver Services Python
 
-**Ideariver Services Python** is a modular plugin-based framework that allows you to dynamically load, run, and test various plugins. It also provides an adapter for RabbitMQ to process messages and execute corresponding plugins.
+**Ideariver Services Python** ideariver Services is a collection of essential services used across the ideariver ecosystem. This repository provides utilities for plugin management, RabbitMQ messaging, and input validation. The services are designed to be modular, reusable, and scalable.
+
+Features
 
 ## Features
 
