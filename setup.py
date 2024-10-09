@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ideariver-services",  # new package name
-    version="0.1.1",  # updated version number
+    version="0.1.2",  # updated version number
     description="A collection of services used by the ideariver ecosystem.",
     author="Your Name",
     author_email="youremail@example.com",
