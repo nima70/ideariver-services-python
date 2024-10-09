@@ -1,8 +1,8 @@
 import pytest
 import pika
 import json
-from plugin_rabbitmq_adapter import PluginRabbitMQAdapter
-from plugin_loader import PluginLoader
+from ideariver_services_python.plugin_rabbitmq_adapter import PluginRabbitMQAdapter
+from ideariver_services_python.plugin_loader import PluginLoader
 
 @pytest.fixture(scope='module')
 def rabbitmq_connection():

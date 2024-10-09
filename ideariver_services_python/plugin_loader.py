@@ -1,7 +1,7 @@
 import importlib.util
 import json
 import os
-from validate_inputs import validate_inputs
+from ideariver_services_python.validate_inputs import validate_inputs
 
 class PluginLoader:
     def __init__(self, plugins_folder):

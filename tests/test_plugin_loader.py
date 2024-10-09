@@ -1,6 +1,6 @@
 import os
 import pytest
-from plugin_loader import PluginLoader
+from ideariver_services_python.plugin_loader import PluginLoader
 
 @pytest.fixture(scope='module')
 def plugin_loader():

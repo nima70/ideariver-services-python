@@ -74,3 +74,17 @@ transcription_service/
 ├── Dockerfile  # Will create this later
 └── README.md   # Optional: to document the project
 ```
+
+
+Package the Code Locally
+Run the following command to package your project:
+```bash
+python setup.py sdist
+```
+
+
+Install the Package Locally: After setting up setup.py, run the following command in your terminal to install the package locally in development mode:
+
+```bash
+pip install -e .
+```
