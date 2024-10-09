@@ -52,9 +52,22 @@ def test_process_message(rabbitmq_connection, adapter):
     Test processing a message by sending data to RabbitMQ, which should trigger sum_plugin.
     """
     connection, channel, queue_name = rabbitmq_connection
-    message = {'name_tag': 'sum_plugin', 'payload': {'a': 5, 'b': 10}, 'user_id': '12345'}
-    send_message(channel, queue_name, message)
     
+    # Example event-driven message
+    event_message = {
+        'event_id': 'event-001',
+        'event_type': 'PLUGIN_RUN',
+        'source': 'plugin-service',
+        'timestamp': '2024-10-09T12:34:56Z',
+        'payload': {
+            'name_tag': 'sum_plugin',
+            'payload': {'a': 5, 'b': 10}
+        },
+        'user_id': '12345'
+    }
+
+    send_message(channel, queue_name, event_message)
+
     method_frame, header_frame, body = channel.basic_get(queue_name)
     if body:
         adapter.process_message(channel, method_frame, header_frame, body)
